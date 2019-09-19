@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ControllerproductController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+
+
+    {% if product|length > 0 %}
+        <table border="1" class="table">
+        <thead style="background: #e9ecef;color: #313131" class="thead-light">
+            <tr>
+                <td>Id</td>
+                <td>Ten</td>
+                <td>Gia</td>
+                <td>Chuc nang</td>
+                <td>Them</td>
+            </tr>
+        </thead>
+    {% for i in range(0, (product|length - 1)) %}
+            <tr>
+                <td>{{ product[i].id }}</td>
+                <td>{{ product[i].ten }}</td>
+                <td>{{ product[i].gia }}</td>
+                <td>
+                    <a href="" >Sua</a>
+                    <a href="" >Xoa</a>
+                </td>
+                <td>
+                    <a href="" >Add</a>
+                </td>
+            </tr>
+    {% endfor %}
+        </table>
+
+
+
+    {% endif %}
+
+{#    This friendly message is coming from:#}
+{#    <ul>#}
+{#        <li>Your controller at <code><a href="{{ '/home/user/Symfony_4/src/Controller/ControllerproductController.php'|file_link(0) }}">src/Controller/ControllerproductController.php</a></code></li>#}
+{#        <li>Your template at <code><a href="{{ '/home/user/Symfony_4/templates/product/index.html.twig'|file_link(0) }}">templates/controllerproduct/index.html.twig</a></code></li>#}
+{#    </ul>#}
+</div>
+{% endblock %}
