@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+    <div style="text-align: center">
+        <h1>Trang nhap san pham: </h1>
+    </div>
+    <div style="margin-top: 50px; " class="d-flex justify-content-center">
+
+        {{ form_start(form) }}
+            {{ form_row(form.ten) }}
+            {{ form_row(form.gia) }}
+            {{ form_row(form.soluong) }}
+            {{ form_row(form.loai) }}
+            {{ form_row(form.giakhuyenmai) }}
+            {{ form_row(form.khuyenmai) }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

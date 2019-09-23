@@ -46,10 +46,15 @@ class Product
      *
      * @ORM\Column(type="integer")
      *
-     * @ORM\ManyToOne(targetEntity="Entity/Loaisanpham", inversedBy="id")
+     *
      *
      */
     private $loai;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $giakhuyenmai;
 
     public function getId(): ?int
     {
@@ -124,6 +129,18 @@ class Product
     public function setLoai(string $loai): self
     {
         $this->loai = $loai;
+
+        return $this;
+    }
+
+    public function getGiakhuyenmai(): ?int
+    {
+        return $this->giakhuyenmai;
+    }
+
+    public function setGiakhuyenmai(?int $giakhuyenmai): self
+    {
+        $this->giakhuyenmai = $giakhuyenmai;
 
         return $this;
     }

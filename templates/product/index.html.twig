@@ -21,7 +21,7 @@
                 <td>Ten</td>
                 <td>Gia</td>
                 <td>Chuc nang</td>
-                <td>Them</td>
+                <td>Chi tiet</td>
             </tr>
         </thead>
     {% for i in range(0, (product|length - 1)) %}
@@ -33,13 +33,11 @@
                     <a href="" >Sua</a>
                     <a href="" >Xoa</a>
                 </td>
-                <td>
-                    <a href="" >Add</a>
-                </td>
+                <td><a href="" >Chi tiet</a></td>
             </tr>
     {% endfor %}
         </table>
-
+<a href="http://localhost:8000/product/add">Thêm sản phẩm</a>
 
 
     {% endif %}

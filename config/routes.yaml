@@ -1,6 +1,6 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+index:
+    path: /product
+    controller: App\Controller\ControllerproductController::index
 
 
 

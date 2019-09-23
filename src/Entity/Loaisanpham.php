@@ -13,7 +13,7 @@ class Loaisanpham
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @ORM\OneToMany(targetEntity="Entity/Product", cascade={delete})
+     *
      */
     private $id;
 
